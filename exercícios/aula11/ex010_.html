@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRASILEIRO OU ESTRANGEIRO</title>
+</head>
+<body>
+    <h1>Brasileiro ou Gringo? QUAL O ERRO?</h1>
+    De onde você é? <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="OK" onclick="resultado()">
+        <div id="res">RESULTADO</div>
+    <script>
+        function resultado() {
+            var nacion = window.document.getElementById('txtnac')
+            var r = window.document.getElementById('res')
+            r.innerHTML = `<p>Você é natural de <strong>${nacion}</strong>.</p>`
+            if (nacion != Brasil) {
+                r.innerHTML += `Portanto, você é estrangeiro`
+            } else {
+                r.innerHTML += `Portanto, você é brasileiro`
+            }
+        }
+    </script>
+</body>
+</html>
